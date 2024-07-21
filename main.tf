@@ -18,7 +18,7 @@ resource "azurerm_private_endpoint" "this" {
 }
 
 module "diagnostic_setting" {
-  source = "git::https://github.com/Noya50/hafifot-diagnosticSetting.git"
+  source = "git::https://github.com/Noya50/hafifot-diagnosticSetting.git?ref=main"
 
   name                       = "${azurerm_private_endpoint.this.name}-diagnostic-setting-tf"
   target_resource_id         = azurerm_private_endpoint.this.network_interface[0].id
