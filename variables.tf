@@ -32,12 +32,6 @@ variable "log_analytics_workspace_id" {
   type = string
 }
 
-variable "diagnostic_setting_categories" {
-  description = "(Optional) Categories for the diagnostic setting of the private endpoint."
-  type = list(string)
-  default = null
-}
-
 variable "is_manual_connection" {
   description = "(Optional) Specify whether the approval of the private endpoint connection is handled manually"
   default     = false
