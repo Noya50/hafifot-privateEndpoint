@@ -23,5 +23,4 @@ module "diagnostic_setting" {
   name                       = "${azurerm_private_endpoint.this.name}-diagnostic-setting-tf"
   target_resource_id         = azurerm_private_endpoint.this.network_interface[0].id
   log_analytics_workspace_id = var.log_analytics_workspace_id
-  diagnostic_setting_categories = var.diagnostic_setting_categories
 }
